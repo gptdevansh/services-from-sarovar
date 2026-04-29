@@ -1,0 +1,13 @@
+export const CURRENCY = "INR";
+export const CONTACT_PHONE = "+919997288805";
+export const WHATSAPP_NUMBER = "919997288805";
+export const RESORT_NAME = "Debu's The Fern Resort";
+export const RESORT_ADDRESS = "Jim Corbett National Park, Patkot, Ramnagar";
+export const RESORT_LOCATION_SHORT = "Patkot, Jim Corbett";
+export const RESORT_DISTANCE_FROM_RAMNAGAR = "27 Km";
+
+// Derived compound strings — built from RESORT_NAME so they update automatically
+export const RESORT_TO_RAMNAGAR = `${RESORT_NAME} To Ramnagar`;
+export const RESORT_TO_DHANGARI = `${RESORT_NAME} To Dhangari Gate`;
+export const RESORT_SUBTITLE = `Of ${RESORT_NAME}, ${RESORT_LOCATION_SHORT}`;
+export const RESORT_INCLUSION_WITH_CAB = `Include: Gypsy, Guide, Permit, ${RESORT_NAME} to Ramnagar Pickup & Drop by Cab`;
