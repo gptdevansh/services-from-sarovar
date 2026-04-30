@@ -1,7 +1,7 @@
 export const CURRENCY = "INR";
 export const CONTACT_PHONE = "+919997288805";
 export const WHATSAPP_NUMBER = "919997288805";
-export const RESORT_NAME = "Debu's The Fern Resort";
+export const RESORT_NAME = "Vandhara Sarovar Premier Resort";
 export const RESORT_ADDRESS = "Jim Corbett National Park, Patkot, Ramnagar";
 export const RESORT_LOCATION_SHORT = "Patkot, Jim Corbett";
 export const RESORT_DISTANCE_FROM_RAMNAGAR = "27 Km";
