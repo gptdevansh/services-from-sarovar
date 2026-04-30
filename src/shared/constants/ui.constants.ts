@@ -1,6 +1,9 @@
 export const CURRENCY = "INR";
-export const CONTACT_PHONE = "+919997288805";
-export const WHATSAPP_NUMBER = "919997288805";
+export const CONTACT_PHONE = "+919520033994";
+export const WHATSAPP_NUMBER = "919520033994";
+export const CONTACT_DISPLAY = "95200-33994";          // formatted for display
+export const CONTACT_CALL_TEXT = `Call ${CONTACT_DISPLAY}`; // e.g. "Call 95200-33994"
+
 export const RESORT_NAME = "Vandhara Sarovar Premier Resort";
 export const RESORT_ADDRESS = "Jim Corbett National Park, Patkot, Ramnagar";
 export const RESORT_LOCATION_SHORT = "Patkot, Jim Corbett";

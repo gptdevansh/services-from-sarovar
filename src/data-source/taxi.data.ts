@@ -1,13 +1,44 @@
 import type { TaxiData } from "@/features/taxi";
-import { RESORT_SUBTITLE } from "@/shared/constants/ui.constants";
+import { RESORT_SUBTITLE, CONTACT_CALL_TEXT } from "@/shared/constants/ui.constants";
 
 
 export const taxiData: TaxiData = {
   header: {
     title: "Cab Service",
-    callText: "Call 99972-88805",
+    callText: CONTACT_CALL_TEXT,
   },
   categories: [
+    // ─── Railway Station Transfers ───────────────────────────────────────────
+    {
+      type: "railway",
+      title: "Near By Railway Station Transfers",
+      subtitle: RESORT_SUBTITLE,
+      routes: [
+        { location: "Ramnagar",   pickupDrop: "Pickup / Drop", price: { dzire: 1500, ertiga: 1875, innova: 2875 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Kathgodam", pickupDrop: "Pickup / Drop", price: { dzire: 4000, ertiga: 5000, innova: 6875 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Haldwani",  pickupDrop: "Pickup / Drop", price: { dzire: 4000, ertiga: 5250, innova: 6875 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Lal Kuan",  pickupDrop: "Pickup / Drop", price: { dzire: 4375, ertiga: 5375, innova: 7250 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Kashipur",  pickupDrop: "Pickup / Drop", price: { dzire: 3125, ertiga: 3750, innova: 5625 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Moradabad", pickupDrop: "Pickup / Drop", price: { dzire: 5000, ertiga: 5625, innova: 7500 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Rampur",    pickupDrop: "Pickup / Drop", price: { dzire: 5250, ertiga: 6250, innova: 7500 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Bareilly",  pickupDrop: "Pickup / Drop", price: { dzire: 6875, ertiga: 7500, innova: 9750 }, extraWaiting: { pricePerHour: 300 } },
+      ],
+    },
+
+    // ─── Airport Transfers ──────────────────────────────────────────────────
+    {
+      type: "airport",
+      title: "Near By Airport Transfers",
+      subtitle: RESORT_SUBTITLE,
+      routes: [
+        { location: "Pantnagar / Sarovar Resort, Patkot", pickupDrop: "Pickup / Drop", price: { dzire: 5000, ertiga: 5625, innova: 8125  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Bareilly",                           pickupDrop: "Pickup / Drop", price: { dzire: 6875, ertiga: 7625, innova: 9750  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Delhi",                              pickupDrop: "Pickup / Drop", price: { dzire: 8750, ertiga: 10000, innova: 14125 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Jolly Grant, Dehradun",              pickupDrop: "Pickup / Drop", price: { dzire: 8750, ertiga: 10000, innova: 14125 }, extraWaiting: { pricePerHour: 300 } },
+      ],
+    },
+
+    // ─── Local Sightseeing ──────────────────────────────────────────────────
     {
       type: "local",
       title: "Near By Corbett Local Sightseeing",
@@ -17,7 +48,7 @@ export const taxiData: TaxiData = {
           location: "Jim Corbett Local Sightseeing",
           duration: "3 Point / Half Day",
           pickupDrop: "Pickup / Drop",
-          price: { dzire: 5200, ertiga: 6500, innova: 7800 },
+          price: { dzire: 5000, ertiga: 6125, innova: 7250 },
           extraWaiting: { pricePerHour: 300 },
           coveringPoints: ["Dhangari Museum", "Garjiya Devi Temple", "Suspension Bridge"],
         },
@@ -25,7 +56,7 @@ export const taxiData: TaxiData = {
           location: "Jim Corbett Local Sightseeing",
           duration: "6 Point / Full Day",
           pickupDrop: "Pickup / Drop",
-          price: { dzire: 6500, ertiga: 7800, innova: 9800 },
+          price: { dzire: 6250, ertiga: 7375, innova: 9125 },
           extraWaiting: { pricePerHour: 300 },
           coveringPoints: [
             "Dhangari Museum",
@@ -38,84 +69,43 @@ export const taxiData: TaxiData = {
         },
       ],
     },
+
+    // ─── Hill Stations ──────────────────────────────────────────────────────
     {
       type: "hillStation",
       title: "Hills Station",
       subtitle: RESORT_SUBTITLE,
       routes: [
-        {
-          location: "Nainital",
-          duration: "Full Day",
-          pickupDrop: "Pickup / Drop",
-          price: { dzire: 6200, ertiga: 7500, innova: 9450 },
-          extraWaiting: { pricePerHour: 300 },
-        },
-        {
-          location: "Kainchi Dham Temple",
-          duration: "Full Day",
-          pickupDrop: "Pickup / Drop",
-          price: { dzire: 7100, ertiga: 8400, innova: 10400 },
-          extraWaiting: { pricePerHour: 300 },
-        },
-        {
-          location: "Mukteshwar",
-          duration: "Full Day",
-          pickupDrop: "Pickup / Drop",
-          price: { dzire: 8200, ertiga: 9500, innova: 12300 },
-          extraWaiting: { pricePerHour: 300 },
-        },
-        {
-          location: "Bhimtal",
-          duration: "Full Day",
-          pickupDrop: "Pickup / Drop",
-          price: { dzire: 6200, ertiga: 7500, innova: 9500 },
-          extraWaiting: { pricePerHour: 300 },
-        },
-        {
-          location: "Ranikhet",
-          duration: "Full Day",
-          pickupDrop: "Pickup / Drop",
-          price: { dzire: 7100, ertiga: 9100, innova: 11650 },
-          extraWaiting: { pricePerHour: 300 },
-        },
+        { location: "Nainital",            duration: "Full Day", pickupDrop: "Pickup / Drop", price: { dzire: 7000, ertiga: 8125, innova: 9875  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Kainchi Dham Temple", duration: "Full Day", pickupDrop: "Pickup / Drop", price: { dzire: 8125, ertiga: 9250, innova: 11000 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Mukteshwar",          duration: "Full Day", pickupDrop: "Pickup / Drop", price: { dzire: 7875, ertiga: 9000, innova: 11625 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Bhimtal",             duration: "Full Day", pickupDrop: "Pickup / Drop", price: { dzire: 6000, ertiga: 7125, innova: 8875  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Ranikhet",            duration: "Full Day", pickupDrop: "Pickup / Drop", price: { dzire: 6875, ertiga: 8625, innova: 11000 }, extraWaiting: { pricePerHour: 300 } },
       ],
     },
+
+    // ─── General Taxi Service Areas ─────────────────────────────────────────
     {
       type: "serviceArea",
       title: "We Provide Taxi Service At These Places",
       subtitle: "Extra toll + parking applies for Nainital & Kainchi Dham Temple",
       routes: [
-        { location: "Ramnagar", pickupDrop: "Pickup / Drop", price: { dzire: 1550, ertiga: 2100, innova: 3250 }, extraWaiting: { pricePerHour: 300 } },
-        { location: "Nainital", pickupDrop: "Pickup / Drop", price: { dzire: 4800, ertiga: 6200, innova: 8500 }, extraWaiting: { pricePerHour: 300 } },
-        { location: "Ranikhet", pickupDrop: "Pickup / Drop", price: { dzire: 6100, ertiga: 7900, innova: 10400 }, extraWaiting: { pricePerHour: 300 } },
-        { location: "Kathgodam", pickupDrop: "Pickup / Drop", price: { dzire: 4200, ertiga: 5600, innova: 7400 }, extraWaiting: { pricePerHour: 300 } },
-        { location: "Haldwani", pickupDrop: "Pickup / Drop", price: { dzire: 4200, ertiga: 5600, innova: 7400 }, extraWaiting: { pricePerHour: 300 } },
-        {
-          location: "Pantnagar Airport",
-          pickupDrop: "Pickup / Drop",
-          price: { dzire: 5200, ertiga: 6000, innova: 8650 },
-          extraWaiting: { pricePerHour: 300 },
-        },
-        { location: "Rudrapur", pickupDrop: "Pickup / Drop", price: { dzire: 5200, ertiga: 6000, innova: 8650 }, extraWaiting: { pricePerHour: 300 } },
-        { location: "Kashipur", pickupDrop: "Pickup / Drop", price: { dzire: 3200, ertiga: 4000, innova: 6100 }, extraWaiting: { pricePerHour: 300 } },
-        { location: "Moradabad", pickupDrop: "Pickup / Drop", price: { dzire: 5200, ertiga: 6000, innova: 8000 }, extraWaiting: { pricePerHour: 300 } },
-        { location: "Bareilly", pickupDrop: "Pickup / Drop", price: { dzire: 7100, ertiga: 8000, innova: 10400 }, extraWaiting: { pricePerHour: 300 } },
-        { location: "Rishikesh", pickupDrop: "Pickup / Drop", price: { dzire: 9100, ertiga: 10400, innova: 11700 }, extraWaiting: { pricePerHour: 300 } },
-        { location: "Haridwar", pickupDrop: "Pickup / Drop", price: { dzire: 8100, ertiga: 9700, innova: 10400 }, extraWaiting: { pricePerHour: 300 } },
-        {
-          location: "Dehradun / City",
-          pickupDrop: "Pickup / Drop",
-          price: { dzire: 9100, ertiga: 10500, innova: 14900 },
-          extraWaiting: { pricePerHour: 300 },
-        },
-        {
-          location: "Delhi / City",
-          pickupDrop: "Pickup / Drop",
-          price: { dzire: 9100, ertiga: 10500, innova: 14900 },
-          extraWaiting: { pricePerHour: 300 },
-        },
-        { location: "Gurugram", pickupDrop: "Pickup / Drop", price: { dzire: 9700, ertiga: 11650, innova: 16800 }, extraWaiting: { pricePerHour: 300 } },
-        { location: "Mussoorie", pickupDrop: "Pickup / Drop", price: { dzire: 11700, ertiga: 13000, innova: 17500 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Ramnagar",          pickupDrop: "Pickup / Drop", price: { dzire: 1500,  ertiga: 1875,  innova: 2875  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Nainital",          pickupDrop: "Pickup / Drop", price: { dzire: 5000,  ertiga: 5250,  innova: 8250  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Ranikhet",          pickupDrop: "Pickup / Drop", price: { dzire: 5875,  ertiga: 7500,  innova: 9750  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Kathgodam",         pickupDrop: "Pickup / Drop", price: { dzire: 4000,  ertiga: 5250,  innova: 6875  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Haldwani",          pickupDrop: "Pickup / Drop", price: { dzire: 4000,  ertiga: 5250,  innova: 6875  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Pantnagar Airport", pickupDrop: "Pickup / Drop", price: { dzire: 5000,  ertiga: 5625,  innova: 8125  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Rudrapur",          pickupDrop: "Pickup / Drop", price: { dzire: 5000,  ertiga: 5625,  innova: 8125  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Kashipur",          pickupDrop: "Pickup / Drop", price: { dzire: 3125,  ertiga: 3750,  innova: 5625  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Moradabad",         pickupDrop: "Pickup / Drop", price: { dzire: 5000,  ertiga: 5625,  innova: 7500  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Barelly",           pickupDrop: "Pickup / Drop", price: { dzire: 6875,  ertiga: 7625,  innova: 9750  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Rishikesh",         pickupDrop: "Pickup / Drop", price: { dzire: 8750,  ertiga: 9875,  innova: 11000 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Haridwar",          pickupDrop: "Pickup / Drop", price: { dzire: 7750,  ertiga: 9250,  innova: 9750  }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Dehradun / City",   pickupDrop: "Pickup / Drop", price: { dzire: 8750,  ertiga: 10000, innova: 13750 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Delhi / City",      pickupDrop: "Pickup / Drop", price: { dzire: 8750,  ertiga: 10000, innova: 13750 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Gurugram",          pickupDrop: "Pickup / Drop", price: { dzire: 9375,  ertiga: 9875,  innova: 16000 }, extraWaiting: { pricePerHour: 300 } },
+        { location: "Mussoorie",         pickupDrop: "Pickup / Drop", price: { dzire: 11250, ertiga: 12375, innova: 16625 }, extraWaiting: { pricePerHour: 300 } },
       ],
     },
   ],
