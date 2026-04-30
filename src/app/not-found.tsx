@@ -61,7 +61,7 @@ export default function NotFound() {
             Off the Beaten Trail
           </h1>
           <p className="text-lg md:text-xl max-w-lg mx-auto leading-relaxed" style={{ color: 'var(--color-muted)' }}>
-            The page you're looking for seems to have gone on a safari of its own. Let's get you back to the main camp safely.
+            The page you&apos;re looking for seems to have gone on a safari of its own. Let&apos;s get you back to the main camp safely.
           </p>
         </motion.div>
 
