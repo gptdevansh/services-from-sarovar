@@ -1,0 +1,20 @@
+Options -Indexes -MultiViews
+RewriteEngine On
+
+# ── Allow _next static assets through without any rewriting ─────────────
+RewriteRule ^_next/(.*)$ _next/$1 [L]
+
+# ── Serve existing files directly (CSS, JS, images, fonts) ──────────────
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# ── Serve directory → its index.html ────────────────────────────────────
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.*?)/?$ $1/index.html [L]
+
+# ── Root → index.html ───────────────────────────────────────────────────
+RewriteRule ^$ index.html [L]
+
+# ── 404 fallback ────────────────────────────────────────────────────────
+ErrorDocument 404 /404.html

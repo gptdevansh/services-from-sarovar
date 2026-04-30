@@ -17,7 +17,7 @@ export type TaxiRoute = {
 };
 
 export type TaxiCategory = {
-  type: "local" | "hillStation" | "transfer" | "serviceArea";
+  type: "local" | "hillStation" | "transfer" | "railway" | "airport" | "serviceArea";
   title: string;
   subtitle?: string;
   routes: TaxiRoute[];

@@ -4,7 +4,7 @@
 import type { ReactNode } from "react";
 import { ZoneBadge } from "./ZoneBadge";
 
-type Category = "current" | "prebooking" | "combined" | "local" | "hillStation" | "serviceArea" | "transfer";
+type Category = "current" | "prebooking" | "combined" | "local" | "hillStation" | "serviceArea" | "transfer" | "railway" | "airport";
 
 const categoryConfig: Record<
   Category,
@@ -58,6 +58,20 @@ const categoryConfig: Record<
     border: "border-zinc-200",
     text: "text-zinc-900",
     labelStyle: "bg-zinc-700 text-white",
+  },
+  railway: {
+    label: "Railway Station",
+    bg: "bg-sky-50",
+    border: "border-sky-300",
+    text: "text-sky-900",
+    labelStyle: "bg-sky-700 text-white",
+  },
+  airport: {
+    label: "Airport Transfer",
+    bg: "bg-violet-50",
+    border: "border-violet-300",
+    text: "text-violet-900",
+    labelStyle: "bg-violet-700 text-white",
   },
 };
 
