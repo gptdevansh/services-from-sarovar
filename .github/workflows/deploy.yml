@@ -34,5 +34,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./out/
-        server-dir: ./public_html/ # Make sure this matches your exact Hostinger public path
+        server-dir: ./ # Since your FTP account drops you directly into public_html
         dangerous-clean-slate: true # Deletes old files before uploading new ones

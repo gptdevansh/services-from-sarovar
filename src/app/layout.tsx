@@ -1,15 +1,32 @@
 import type { Metadata } from "next";
 import type { Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Cinzel } from "next/font/google";
 import "./globals.css";
 import { UserProvider } from "@/features/user";
-import { RESORT_NAME, RESORT_ADDRESS } from "@/shared/constants/ui.constants";
+import { BRAND_NAME, RESORT_NAME, RESORT_ADDRESS } from "@/shared/constants/ui.constants";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
+const cinzel = Cinzel({ 
+  subsets: ["latin"], 
+  display: "swap",
+  variable: "--font-cinzel",
+});
 
 export const metadata: Metadata = {
-  title: `Services from ${RESORT_NAME}`,
-  description: `Safari, cab & leisure services at ${RESORT_NAME}, ${RESORT_ADDRESS}`,
+  title: {
+    default: `${BRAND_NAME} | Official Jim Corbett Safari & Travel Services`,
+    template: `%s | ${BRAND_NAME}`
+  },
+  description: `Book your ultimate Corbett Safari experience with ${BRAND_NAME}. Providing premium Jeep safaris, Canter safaris, and luxury cab services from ${RESORT_NAME} at ${RESORT_ADDRESS}.`,
+  keywords: ["Jim Corbett Safari", "Panthera Corbett Safari", "Jeep Safari Booking", "Dhikala Safari", "Corbett Cab Service", "Vandhara Sarovar Resort Safari"],
+  authors: [{ name: BRAND_NAME }],
+  creator: BRAND_NAME,
+  publisher: BRAND_NAME,
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
     icon: '/icon.svg',
   },
@@ -27,7 +44,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${cinzel.variable}`}>
         <UserProvider>
           {children}
         </UserProvider>
