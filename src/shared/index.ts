@@ -17,6 +17,7 @@ export * from "./components/NotesList";
 export * from "./components/PolicyFooter";
 export * from "./components/ZoneBadge";
 export * from "./components/CallHeader";
+export * from "./components/MainFooter";
 
 export * from "./constants/ui.constants";
 export * from "./utils/helpers";
