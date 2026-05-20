@@ -17,6 +17,9 @@ export function MainFooter() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           {/* Brand & Mission */}
           <div className="space-y-4">
+            <h1 className="text-sm font-bold uppercase tracking-widest text-white/60">
+              SERVICES FROM
+            </h1> 
             <h3 className="font-brand text-2xl font-bold tracking-wider text-white">
               {BRAND_NAME}
             </h3>
@@ -31,12 +34,14 @@ export function MainFooter() {
               Contact Us
             </h4>
             <ul className="space-y-4 text-sm">
-              <li className="flex items-center gap-3">
-                <Mail size={18} className="text-white/40" />
-                <a href={`mailto:${BRAND_EMAIL}`} className="text-zinc-300 hover:text-white hover:underline">
-                  {BRAND_EMAIL}
-                </a>
-              </li>
+              {BRAND_EMAIL ? (
+                <li className="flex items-center gap-3">
+                  <Mail size={18} className="text-white/40" />
+                  <a href={`mailto:${BRAND_EMAIL}`} className="text-zinc-300 hover:text-white hover:underline">
+                    {BRAND_EMAIL}
+                  </a>
+                </li>
+              ) : null}
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-white/40" />
                 <a href={`tel:${CONTACT_PHONE}`} className="text-zinc-300 hover:text-white hover:underline">

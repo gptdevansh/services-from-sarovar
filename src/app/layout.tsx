@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import type { Viewport } from "next";
-import { Inter, Cinzel } from "next/font/google";
+import { Cinzel, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import { UserProvider } from "@/features/user";
 import { BRAND_NAME, RESORT_NAME, RESORT_ADDRESS } from "@/shared/constants/ui.constants";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans",
+});
 const cinzel = Cinzel({ 
   subsets: ["latin"], 
   display: "swap",
@@ -44,7 +48,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${cinzel.variable}`}>
+      <body className={`${sourceSans.variable} ${cinzel.variable}`}>
         <UserProvider>
           {children}
         </UserProvider>
