@@ -71,11 +71,14 @@
    BASE STYLES
    ───────────────────────────────────────── */
 html {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans), "Source Sans 3", system-ui, -apple-system, sans-serif;
 }
 
 body {
   background-color: var(--color-bg);
+  background-image: radial-gradient(circle at 15% 5%, rgba(198, 167, 94, 0.15), transparent 45%),
+    radial-gradient(circle at 85% 0%, rgba(15, 61, 46, 0.12), transparent 40%);
+  background-attachment: fixed;
   color: var(--color-text);
   -webkit-font-smoothing: antialiased;
 }

@@ -13,7 +13,7 @@ export function TopNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex flex-wrap gap-3">
+    <nav className="flex w-full flex-wrap justify-center gap-3">
       {navItems.map((item) => {
         const isActive = pathname === item.href;
 
